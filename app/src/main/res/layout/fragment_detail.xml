@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bin_cardview"
+        style="@style/CustomCardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:strokeColor="?android:textColorHint">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_country"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toTopOf="@+id/txt_event_time"
+                app:layout_constraintEnd_toStartOf="@+id/img_away_team"
+                app:layout_constraintStart_toEndOf="@+id/img_home_team"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:strokeColor="@color/peach"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                android:id="@+id/txt_league_name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="League"
+                android:textColor="@color/peach"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/img_home_team"
+                app:layout_constraintEnd_toEndOf="@+id/img_home_team"
+                app:layout_constraintStart_toStartOf="@+id/img_home_team"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_home_team"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_event_final_result"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:strokeColor="@color/peach"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                android:id="@+id/txt_home_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team1"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/img_home_team"
+                app:layout_constraintStart_toStartOf="@+id/img_home_team"
+                app:layout_constraintTop_toBottomOf="@+id/img_home_team" />
+
+            <TextView
+                android:id="@+id/txt_event_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Time"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/txt_event_final_result"
+                app:layout_constraintEnd_toStartOf="@+id/img_away_team"
+                app:layout_constraintStart_toEndOf="@+id/img_home_team"
+                app:layout_constraintTop_toBottomOf="@+id/img_country" />
+
+            <TextView
+                android:id="@+id/txt_event_final_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Score"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/img_away_team"
+                app:layout_constraintStart_toEndOf="@+id/img_home_team"
+                app:layout_constraintTop_toBottomOf="@+id/img_country" />
+
+            <TextView
+                android:id="@+id/txt_country_name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:textStyle="bold"
+                android:textColor="@color/peach"
+                app:layout_constraintBottom_toTopOf="@+id/img_away_team"
+                app:layout_constraintEnd_toEndOf="@+id/img_away_team"
+                app:layout_constraintStart_toStartOf="@+id/img_away_team"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_away_team"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_event_final_result"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:strokeColor="@color/peach"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                android:id="@+id/txt_away_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team2"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/img_away_team"
+                app:layout_constraintStart_toStartOf="@+id/img_away_team"
+                app:layout_constraintTop_toBottomOf="@+id/img_away_team" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/lineups_cardview"
+        style="@style/CustomCardview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bin_cardview"
+        app:strokeColor="?android:textColorHint">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayers"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="6"
+                    tools:listitem="@layout/detail_rv_item" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
